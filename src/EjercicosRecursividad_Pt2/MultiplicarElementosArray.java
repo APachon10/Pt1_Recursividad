@@ -1,16 +1,13 @@
 package EjercicosRecursividad_Pt2;
 
-import java.util.Arrays;
 import java.util.Scanner;
-
-import EjerciciosRecursividad.calcularPotencia;
 
 public class MultiplicarElementosArray {
 	public static final int medida = 2;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		//Creamos el Objeto con el que llamaremos a la funcion 
-		calcularPotencia cp = new calcularPotencia();
+		MultiplicarElementosArray mp3 = new MultiplicarElementosArray();
 		//Variables que le enviaremos al metodo
 		int numeros[] = new int[medida];
 		boolean verificado = false;
@@ -33,11 +30,15 @@ public class MultiplicarElementosArray {
 		System.out.println("============");
 		//Cerramos el Scanner
 		scan.close();
+		int pos = numeros.length;
 		//Printamos el Resultado del metodo Recursivo 
-		System.out.println("El resultado és: ");
+		System.out.println("El resultado és: "+mp3.calcularProductoArray(numeros,pos-1));
 	}
-	public int calcularProductoArray(int valores []) {
-		System.out.println("Vector: "+Arrays.toString(valores));
-		return 0;
+	public int calcularProductoArray(int valores [],int posicion) {
+		if(posicion!=0) {
+			return valores[posicion]*calcularProductoArray(valores, posicion-1);
+		}else {
+			return valores[posicion];
+		}
 	}
 }

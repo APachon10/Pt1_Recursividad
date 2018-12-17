@@ -10,6 +10,7 @@ public class SumarDigitos {
 		
 		System.out.print("Introduce un Numero:");
 		numero = scan.nextInt();
+		scan.close();
 		System.out.println("===============");
 		System.out.println("Resultado : La suma de todos los digitos del numero "+sd.sumarDigitosNumero(numero));
 	}

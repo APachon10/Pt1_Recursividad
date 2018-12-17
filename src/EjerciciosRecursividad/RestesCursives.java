@@ -11,6 +11,7 @@ public class RestesCursives {
 		Dividendo =scan.nextInt();
 		System.out.print("Introduce el Divisor:");
 		Divisor =scan.nextInt();
+		scan.close();
 		System.out.println("Resultado");
 		System.out.println("El resultado "+ restasRecursivas(Dividendo, Divisor));
 		

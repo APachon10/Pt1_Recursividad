@@ -36,14 +36,12 @@ public class Multiplicacio_Metode_Rus {
 				scan.next();
 			}
 		}while(!verificado);
+		scan.close();
 		//Llamamos al metodo/funcion y printamos el resultado 
 		System.out.println("=====================");
 		System.out.println("El producto de los Numeros " +num1 + " y "+ num2 + " és:"+mr.calcularProducto(num1,num2));
 	}
 	public int calcularProducto(int a, int b) {
-		//Creamos la variable que devolveremos al metodo Main 
-		int res =1;
-		
 		/*System.out.println("===================================");
 		System.out.println("Estamos dentro del Metodo calcular Producto ");
 		System.out.print("Primer Numero: " +a +"\n============"+"\nSegundo Numero: "+b);*/

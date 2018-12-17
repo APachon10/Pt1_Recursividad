@@ -1,7 +1,5 @@
 package EjerciciosRecursividad;
 
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class SumarElementosVector {
@@ -14,6 +12,7 @@ public class SumarElementosVector {
 		for (int i = 0; i < valores.length; i++) {
 			valores[i]=scan.nextInt();
 		}
+		scan.close();
 		System.out.println("=======================");
 		System.out.println("Valores introducidos ");
 		SumarElementosVector vl = new SumarElementosVector();
@@ -22,8 +21,6 @@ public class SumarElementosVector {
 		System.out.println("La suma de los numeros del vector és:"+vl.sumarElementos(valores,pos-1));
 	}
 	public int sumarElementos(int numeros[],int posicion) {
-		int suma=0;
-
 		if (posicion!= 0) {
 			return numeros[posicion] + sumarElementos(numeros, posicion-1);
 		} else {

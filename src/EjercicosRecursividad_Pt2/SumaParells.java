@@ -9,11 +9,10 @@ public class SumaParells {
 		System.out.println("Resultado: "+ sp.sumarParesRecursivo(numero));
 	}
 	public int sumarParesRecursivo(int n) {
-		System.out.println("Valor de N : "+ n);
-		if(n%2 == 0 || n>2) {
-			return n+sumarParesRecursivo(n-1);
-		}else {
+		if(n==2) {
 			return 2;
+		}else {
+			return n+sumarParesRecursivo(n-2);
 		}
 		
 	}

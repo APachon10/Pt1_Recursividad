@@ -28,11 +28,13 @@ public class InvertirNumero {
 		//Printamos el Resultado del metodo Recursivo 
 		System.out.println("El Numero "+numero + " Invertido es: "+inv.invertirNumero(numero));
 	}
-	public int invertirNumero(int num) {
+	public String invertirNumero(int num) {
 		int inverso = 0;
 		if(num!=0) {
-			return num%10 +invertirNumero(num/10);
+			return String.valueOf(num%10)+String.valueOf(invertirNumero(num/10));
+		}else {
+			
 		}
-		return 0;
+		return "(Invertido)" ;
 	} 
 }

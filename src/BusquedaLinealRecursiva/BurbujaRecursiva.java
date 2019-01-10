@@ -15,22 +15,36 @@ public class BurbujaRecursiva {
 		System.out.println("====================");
 		System.out.println("Valor aux: "+valor_aux);
 		System.out.println("====================");
-		for (int i = 0; i < v.length; i++) {
+		if(pos == v.length-1) {
+			return v; 
+		}else {
 			for (int j = 0; j < v.length-1; j++) {
 				if(v[j] > v[j+1]) {
-					ordenacionBurbuja(v, pos+1);
+					 valor_aux = v[j+1];
+					 v[j+1] = v[j];
+					 v[j] = valor_aux;
 				}
 			}
+			ordenacionBurbuja(v, pos+1);
 		}
+		
+
 		return v;
-//		 for(int i = 0; i < arreglo.length - 1; i++){
-//            for(int j = 0; j < arreglo.length - 1; j++){
-//                if (arreglo[j] < arreglo[j + 1]){
-//                    int tmp = arreglo[j+1];
-//                    arreglo[j+1] = arreglo[j];
-//                    arreglo[j] = tmp;
-//                }
-//            }
-//        }
+
+		//		if(posicion!=0) {
+		//			return valores[posicion]*calcularProductoArray(valores, posicion-1);
+		//		}else {
+		//			return valores[posicion];
+		//		}
+
+		//		 for(int i = 0; i < arreglo.length - 1; i++){
+		//            for(int j = 0; j < arreglo.length - 1; j++){
+		//                if (arreglo[j] < arreglo[j + 1]){
+		//                    int tmp = arreglo[j+1];
+		//                    arreglo[j+1] = arreglo[j];
+		//                    arreglo[j] = tmp;
+		//                }
+		//            }
+		//        }
 	}
 }

@@ -20,7 +20,7 @@ public class CalcularProductoSuma {
 	public int calcularProductoRecursivo(int [] num, int posicion ){
 		if (posicion==0) {
 			return 0;
-		}	
+		}
 		if (num[posicion]%2==0) {
 			System.out.println("multiplo de 2:" + num[posicion]);
 			return num[posicion]+calcularProductoRecursivo(num, posicion-1);

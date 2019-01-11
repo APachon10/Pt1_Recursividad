@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class MetodosVerificacionDatos_Proyecto {
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 		String dni =null; 
-		dni = verificarDNI(dni);
-		System.out.println(dni);
+		int codigo = scan.nextInt();
+		verficarCodigo(codigo);
+//		dni = verificarDNI(dni);
+//		System.out.println(dni);
+//		System.out.println("============");
+		System.out.println("tel "+ codigo);
 	}
 	public static String verificarDNI(String palabra ) {
 		Scanner scan  =new Scanner(System.in);
@@ -23,7 +28,17 @@ public class MetodosVerificacionDatos_Proyecto {
 			}
 		}
 		return DNI;
-		
-		
+
+
+	}
+	public static  int verficarCodigo(int codigo ) {
+		boolean salir = false;
+		System.out.println(codigo);
+		while(!salir) {
+			if (codigo>=1 && codigo <=100) {
+				salir  =true;
+			}
+		}
+		return codigo;
 	}
 }

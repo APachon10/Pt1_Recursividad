@@ -25,8 +25,9 @@ public class Gestion_Clientes_Prueba {
 					+ "\n 2 - Visualizar Cliente"
 					+ "\n 3 - Dar de Baja a un cliente "
 					+ "\n 4 - Recuperar Datos Cliente "
-					+ "\n 5 - Recerca Client "
-					+ "\n 5 - Salir"
+					+ "\n 5 - Ordenar Clientes "
+					+ "\n 6 - Recerca Client "
+					+ "\n 7 - Salir"
 					+ "\n ===================");
 			op= leerValor();
 			switch (op) {
@@ -50,9 +51,14 @@ public class Gestion_Clientes_Prueba {
 				RecuperarCliente(Clientes);
 				System.out.println("===================");
 				break;
-			case 5:
+			case 6:
 				System.out.println("===================");
 				busquedaCliente(Clientes);
+				System.out.println("===================");
+				break;
+			case 7:
+				System.out.println("===================");
+				System.out.println("Cerrando Sistema ..... ");
 				System.out.println("===================");
 				break;
 			}

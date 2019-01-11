@@ -9,14 +9,14 @@ public class BurbujaRecursiva {
 		ordenacionBurbuja(vector, posicion);
 		System.out.println("Vector : "+Arrays.toString(vector));
 	}
-	public static int [] ordenacionBurbuja(int [] v,int pos ) {
+	public static void ordenacionBurbuja(int [] v,int pos ) {
 		int valor_aux =0;
-		System.out.println("Valor Array : " + v[pos]);
-		System.out.println("====================");
-		System.out.println("Valor aux: "+valor_aux);
-		System.out.println("====================");
+//		System.out.println("Valor Array : " + v[pos]);
+//		System.out.println("====================");
+//		System.out.println("Valor aux: "+valor_aux);
+//		System.out.println("====================");
 		if(pos == v.length-1) {
-			return v; 
+			return; 
 		}else {
 			for (int j = 0; j < v.length-1; j++) {
 				if(v[j] > v[j+1]) {
@@ -27,8 +27,6 @@ public class BurbujaRecursiva {
 			}
 			ordenacionBurbuja(v, pos+1);
 		}
-		
-
-		return v;
+		return ;
 	}
 }

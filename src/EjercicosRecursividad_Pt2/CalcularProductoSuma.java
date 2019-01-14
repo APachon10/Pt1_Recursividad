@@ -14,25 +14,23 @@ public class CalcularProductoSuma {
 		
 		System.out.println("==============");
 		int pos= x.length;
-		
-		System.out.println("El Resultado és: " + c.calcularProductoRecursivo(x,pos-1));
+		int contador1 = 0;
+		int contador2 = 0;
+		System.out.println("El Resultado és: " + c.calcularProductoRecursivo(x,pos-1,contador1,contador2));
 	}
-	public int calcularProductoRecursivo(int [] num, int posicion ){
-		if (posicion==0) {
-			return 0;
+	public static int calcularProductoRecursivo(int [] num, int posicion,int con_m2,int cont_m3 ){
+		if (posicion> num.length) {
+			return con_m2*cont_m3;
 		}
 		if (num[posicion]%2==0) {
-			System.out.println("multiplo de 2:" + num[posicion]);
-			return num[posicion]+calcularProductoRecursivo(num, posicion-1);
+			System.out.println("Multiplo de 2: "+num[posicion]);
+			con_m2 = con_m2 + num[posicion];
+			return calcularProductoRecursivo(num, posicion+1, con_m2, cont_m3);
 		}else if(num[posicion]%3==0) {
-			System.out.println("multiplo de 3:" + num[posicion]);
-			return num[posicion]+calcularProductoRecursivo(num, posicion-1);
-		}else if(num[posicion]%3!= 0 && num[posicion]%2!=0 ) {
-			System.out.println("no soy multiplo de nadie:" + num[posicion]);
-			calcularProductoRecursivo(num, posicion-1);
-			return num[posicion];
+			System.out.println("Multiplo de 3: "+num[posicion]);
+			cont_m3 = cont_m3 + num[posicion];
+			return calcularProductoRecursivo(num, posicion+1, con_m2, cont_m3);
 		}
-		return num[posicion];
 	}
 	public  int [] rellenarVector(int[] num) {
 		Random r = new Random();
